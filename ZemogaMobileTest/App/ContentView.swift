@@ -2,15 +2,14 @@
 //  ContentView.swift
 //  ZemogaMobileTest
 //
-//  Created by mac on 18/03/22.
+//  Created by Carlos Hernández on 18/03/22.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        MainView()
     }
 }
 
