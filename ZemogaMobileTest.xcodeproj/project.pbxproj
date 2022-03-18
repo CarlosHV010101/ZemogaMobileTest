@@ -16,6 +16,7 @@
 		042EA06827E4C03F002D4E08 /* ZemogaMobileTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA06727E4C03F002D4E08 /* ZemogaMobileTestTests.swift */; };
 		042EA07327E4C03F002D4E08 /* ZemogaMobileTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA07227E4C03F002D4E08 /* ZemogaMobileTestUITests.swift */; };
 		042EA08B27E4C154002D4E08 /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA08A27E4C154002D4E08 /* PostsView.swift */; };
+		042EA09527E4C1F8002D4E08 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA09427E4C1F8002D4E08 /* NavigationBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		042EA07227E4C03F002D4E08 /* ZemogaMobileTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZemogaMobileTestUITests.swift; sourceTree = "<group>"; };
 		042EA07427E4C03F002D4E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042EA08A27E4C154002D4E08 /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
+		042EA09427E4C1F8002D4E08 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		042EA04F27E4C03E002D4E08 /* ZemogaMobileTest */ = {
 			isa = PBXGroup;
 			children = (
+				042EA09C27E4C23D002D4E08 /* Utils */,
 				042EA08827E4C120002D4E08 /* Model */,
 				042EA08727E4C115002D4E08 /* ViewModel */,
 				042EA08627E4C10A002D4E08 /* View */,
@@ -144,6 +147,7 @@
 		042EA08627E4C10A002D4E08 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				042EA09227E4C1D3002D4E08 /* Shared */,
 				042EA08927E4C12C002D4E08 /* Screens */,
 			);
 			path = View;
@@ -169,6 +173,29 @@
 				042EA08A27E4C154002D4E08 /* PostsView.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		042EA09227E4C1D3002D4E08 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				042EA09327E4C1DA002D4E08 /* NavigationBar */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		042EA09327E4C1DA002D4E08 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				042EA09427E4C1F8002D4E08 /* NavigationBarView.swift */,
+			);
+			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		042EA09C27E4C23D002D4E08 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +332,7 @@
 				042EA05327E4C03E002D4E08 /* SceneDelegate.swift in Sources */,
 				042EA05527E4C03E002D4E08 /* ContentView.swift in Sources */,
 				042EA08B27E4C154002D4E08 /* PostsView.swift in Sources */,
+				042EA09527E4C1F8002D4E08 /* NavigationBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
