@@ -135,13 +135,11 @@
 		042EA04F27E4C03E002D4E08 /* ZemogaMobileTest */ = {
 			isa = PBXGroup;
 			children = (
+				042EA10427E53102002D4E08 /* App */,
 				042EA09C27E4C23D002D4E08 /* Utils */,
 				042EA08827E4C120002D4E08 /* Model */,
 				042EA08727E4C115002D4E08 /* ViewModel */,
 				042EA08627E4C10A002D4E08 /* View */,
-				042EA05027E4C03E002D4E08 /* AppDelegate.swift */,
-				042EA05227E4C03E002D4E08 /* SceneDelegate.swift */,
-				042EA05427E4C03E002D4E08 /* ContentView.swift */,
 				042EA05627E4C03E002D4E08 /* Assets.xcassets */,
 				042EA05B27E4C03E002D4E08 /* LaunchScreen.storyboard */,
 				042EA05E27E4C03F002D4E08 /* Info.plist */,
@@ -268,6 +266,16 @@
 				042EA0FA27E514F0002D4E08 /* NetworkErrorView.swift */,
 			);
 			path = StateViews;
+			sourceTree = "<group>";
+		};
+		042EA10427E53102002D4E08 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				042EA05027E4C03E002D4E08 /* AppDelegate.swift */,
+				042EA05227E4C03E002D4E08 /* SceneDelegate.swift */,
+				042EA05427E4C03E002D4E08 /* ContentView.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

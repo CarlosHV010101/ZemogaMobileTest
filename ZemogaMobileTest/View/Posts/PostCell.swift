@@ -12,7 +12,7 @@ struct PostCell: View {
         VStack {
             HStack {
                             
-                Image(systemName: "star.fill")
+                Image(systemName: IconConstants.PostCell.star)
                     .foregroundColor(.yellow)
                 
                 Text("Secondary line text Lorem Ipsum amet, consectur adispicing elit. Nam massa quam")
@@ -21,7 +21,7 @@ struct PostCell: View {
                 
                 Spacer()
                 
-                Image(systemName: "chevron.forward")
+                Image(systemName: IconConstants.PostCell.arrow)
                     .foregroundColor(.gray)
             }
             .padding(.horizontal, 15)

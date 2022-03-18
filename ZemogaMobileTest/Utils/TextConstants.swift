@@ -12,6 +12,8 @@ public enum TextConstants {
     enum Posts {
         static let navigationBarTitle = "Posts"
         static let deleteAllButtonTitle = "Delete All"
+        static let segmentedControlAll = "All"
+        static let segmentedControlFavorites = "Favorites"
     }
     
     enum PostDetails {

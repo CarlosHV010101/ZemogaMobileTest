@@ -24,9 +24,9 @@ struct PostsSegmentedControl: View {
     
     var body: some View {
         Picker("", selection: $listSelection) {
-            Text("All")
+            Text(TextConstants.Posts.segmentedControlAll)
                 .tag(PostSelection.all)
-            Text("Favorites")
+            Text(TextConstants.Posts.segmentedControlFavorites)
                 .tag(PostSelection.favorites)
         }
         .pickerStyle(SegmentedPickerStyle())

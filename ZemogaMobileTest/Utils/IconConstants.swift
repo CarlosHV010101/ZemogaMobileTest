@@ -19,4 +19,9 @@ public enum IconConstants {
     enum Status {
         static let wifiError = "wifi.slash"
     }
+    
+    enum PostCell {
+        static let star = "star.fill"
+        static let arrow = "chevron.forward"
+    }
 }
