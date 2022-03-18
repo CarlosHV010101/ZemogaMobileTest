@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PostsView: View {
+    @State private var selection: PostSelection = .all
+    
     var body: some View {
         VStack {
             
@@ -22,8 +24,17 @@ struct PostsView: View {
                 )
             }
             
+            PostsSegmentedControl(listSelection: $selection)
+                .padding(.horizontal, 15)
+            
             ScrollView(showsIndicators: false) {
-                PostsList()
+                
+                switch selection {
+                case .all:
+                    PostsList()
+                case .favorites:
+                    PostsList()
+                }
             }
             
             DeletePostsButtonView(action: {})

@@ -32,6 +32,7 @@
 		042EA0EE27E5136B002D4E08 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0ED27E5136B002D4E08 /* LoaderView.swift */; };
 		042EA0F627E51398002D4E08 /* LoaderDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0F527E51398002D4E08 /* LoaderDot.swift */; };
 		042EA0FB27E514F0002D4E08 /* NetworkErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0FA27E514F0002D4E08 /* NetworkErrorView.swift */; };
+		042EA10027E51A54002D4E08 /* PostsSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0FF27E51A54002D4E08 /* PostsSegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		042EA0ED27E5136B002D4E08 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		042EA0F527E51398002D4E08 /* LoaderDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderDot.swift; sourceTree = "<group>"; };
 		042EA0FA27E514F0002D4E08 /* NetworkErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorView.swift; sourceTree = "<group>"; };
+		042EA0FF27E51A54002D4E08 /* PostsSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsSegmentedControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +255,7 @@
 			children = (
 				042EA0DB27E50E2F002D4E08 /* PostsList.swift */,
 				042EA0E327E50E3C002D4E08 /* PostCell.swift */,
+				042EA0FF27E51A54002D4E08 /* PostsSegmentedControl.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				042EA09E27E4C275002D4E08 /* IconConstants.swift in Sources */,
 				042EA0B027E4D71F002D4E08 /* DeletePostsButtonView.swift in Sources */,
 				042EA0AB27E4D046002D4E08 /* NavigationBarButtonView.swift in Sources */,
+				042EA10027E51A54002D4E08 /* PostsSegmentedControl.swift in Sources */,
 				042EA05527E4C03E002D4E08 /* ContentView.swift in Sources */,
 				042EA0D627E50931002D4E08 /* CommentCellView.swift in Sources */,
 				042EA08B27E4C154002D4E08 /* PostsView.swift in Sources */,
