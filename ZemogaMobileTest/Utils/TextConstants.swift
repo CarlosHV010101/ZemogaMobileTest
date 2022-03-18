@@ -13,4 +13,8 @@ public enum TextConstants {
         static let navigationBarTitle = "Post"
         static let deleteAllButtonTitle = "Delete All"
     }
+    
+    enum PostDetails {
+        static let descriptionTitle = "Description"
+    }
 }
