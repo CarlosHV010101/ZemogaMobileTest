@@ -26,6 +26,8 @@ struct PostsView: View {
             ScrollView {
                 
             }
+            
+            DeletePostsButtonView(action: {})
         }
     }
 }
