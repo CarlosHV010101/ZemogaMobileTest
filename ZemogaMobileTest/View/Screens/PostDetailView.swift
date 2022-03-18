@@ -11,22 +11,25 @@ struct PostDetailView: View {
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        VStack {
-            NavigationBarView(
-                title: "Post") {
-                NavigationBarButtonView(
-                    action: { presentationMode.wrappedValue.dismiss() },
-                    icon: IconConstants.ToolBarIcons.back
-                )
-            } leftButton: {
-                NavigationBarButtonView(
-                    action: { },
-                    icon: IconConstants.ToolBarIcons.favorite
-                )
-            }
+        ScrollView {
+            VStack {
+                NavigationBarView(
+                    title: "Post") {
+                    NavigationBarButtonView(
+                        action: { presentationMode.wrappedValue.dismiss() },
+                        icon: IconConstants.ToolBarIcons.back
+                    )
+                } leftButton: {
+                    NavigationBarButtonView(
+                        action: { },
+                        icon: IconConstants.ToolBarIcons.favorite
+                    )
+                }
 
-            PostDescriptionView(postDescription: "struct NavigationBarView <RightButton: View, LeftButton: View>: View {")
+                PostDescriptionView(postDescription: "struct NavigationBarView <RightButton: View, LeftButton: View>: View {")
+            }
         }
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
