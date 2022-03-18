@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct PostCell: View {
+    @StateObject private var viewModel: PostViewModel
+    
+    init(viewModel: PostViewModel) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
     var body: some View {
         VStack {
+            
+            NavigationLink(
+                destination: PostDetailView(),
+                tag: PostViewModel.Router.details,
+                selection: $viewModel.route,
+                label: { EmptyView() }
+            )
+            
             HStack {
                             
                 Image(systemName: IconConstants.PostCell.star)
@@ -28,11 +42,14 @@ struct PostCell: View {
             
             Divider()
         }
+        .onTapGesture {
+            viewModel.goToDetails()
+        }
     }
 }
 
 struct PostCell_Previews: PreviewProvider {
     static var previews: some View {
-        PostCell()
+        PostCell(viewModel: PostViewModel())
     }
 }

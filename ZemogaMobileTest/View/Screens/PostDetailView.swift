@@ -34,6 +34,7 @@ struct PostDetailView: View {
             }
         }
         .edgesIgnoringSafeArea(.top)
+        .navigationBarHidden(true)
     }
 }
 

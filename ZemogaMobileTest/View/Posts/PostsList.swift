@@ -9,9 +9,10 @@ import SwiftUI
 
 struct PostsList: View {
     var body: some View {
+        
         VStack {
             ForEach(1..<5, id: \.self) { _ in
-                PostCell()
+                PostCell(viewModel: PostViewModel())
             }
         }
     }
@@ -20,5 +21,6 @@ struct PostsList: View {
 struct PostsLists_Previews: PreviewProvider {
     static var previews: some View {
         PostsList()
+            .previewLayout(.sizeThatFits)
     }
 }

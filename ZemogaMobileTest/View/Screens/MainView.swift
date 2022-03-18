@@ -15,34 +15,41 @@ struct MainView: View {
     }
     
     var body: some View {
-        VStack {
-            
-            NavigationBarView(
-                title: TextConstants.Posts.navigationBarTitle
-            ) {
-                EmptyView()
-            } leftButton: {
-                NavigationBarButtonView(
-                    action: viewModel.loadPosts,
-                    icon: IconConstants.ToolBarIcons.load
-                )
-            }
-            
-            PostsSegmentedControl(listSelection: $viewModel.currentPostListSelection)
-                .padding(.horizontal, 15)
-            
-            ScrollView(showsIndicators: false) {
+        NavigationView {
+            VStack {
                 
-                switch viewModel.currentPostListSelection {
-                case .all:
-                    PostsList()
-                case .favorites:
-                    PostsList()
+                NavigationBarView(
+                    title: TextConstants.Posts.navigationBarTitle
+                ) {
+                    EmptyView()
+                } leftButton: {
+                    NavigationBarButtonView(
+                        action: viewModel.loadPosts,
+                        icon: IconConstants.ToolBarIcons.load
+                    )
                 }
+                
+                VStack(spacing: 50) {
+                    PostsSegmentedControl(listSelection: $viewModel.currentPostListSelection)
+                        .padding(.horizontal, 15)
+                    
+                    ScrollView(showsIndicators: false) {
+                        
+                        switch viewModel.currentPostListSelection {
+                        case .all:
+                            PostsList()
+                        case .favorites:
+                            PostsList()
+                        }
+                    }
+                }
+                
+                DeletePostsButtonView(action: viewModel.deleteAllPosts)
             }
-            
-            DeletePostsButtonView(action: viewModel.deleteAllPosts)
         }
+        .navigationBarTitle("", displayMode: .inline)
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

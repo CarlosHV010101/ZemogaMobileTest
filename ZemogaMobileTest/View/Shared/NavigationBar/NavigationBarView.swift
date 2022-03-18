@@ -37,7 +37,6 @@ struct NavigationBarView <RightButton: View, LeftButton: View>: View {
             Text(title)
                 .font(.title3)
                 .foregroundColor(.white)
-                .padding(.vertical, 15)
             
             Spacer()
             
@@ -50,6 +49,8 @@ struct NavigationBarView <RightButton: View, LeftButton: View>: View {
                 .padding(.trailing, 15)
             }
         }
+        .padding(.top, 32)
+        .padding(.bottom, 15)
         .background(Color.green.edgesIgnoringSafeArea(.top))
     }
 }
