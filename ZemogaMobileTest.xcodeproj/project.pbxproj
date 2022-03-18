@@ -33,6 +33,8 @@
 		042EA0F627E51398002D4E08 /* LoaderDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0F527E51398002D4E08 /* LoaderDot.swift */; };
 		042EA0FB27E514F0002D4E08 /* NetworkErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0FA27E514F0002D4E08 /* NetworkErrorView.swift */; };
 		042EA10027E51A54002D4E08 /* PostsSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0FF27E51A54002D4E08 /* PostsSegmentedControl.swift */; };
+		042EA11227E53315002D4E08 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA11127E53315002D4E08 /* MainViewModel.swift */; };
+		042EA11727E53343002D4E08 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA11627E53343002D4E08 /* PostViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		042EA0F527E51398002D4E08 /* LoaderDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderDot.swift; sourceTree = "<group>"; };
 		042EA0FA27E514F0002D4E08 /* NetworkErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorView.swift; sourceTree = "<group>"; };
 		042EA0FF27E51A54002D4E08 /* PostsSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsSegmentedControl.swift; sourceTree = "<group>"; };
+		042EA11127E53315002D4E08 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		042EA11627E53343002D4E08 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,8 @@
 		042EA08727E4C115002D4E08 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				042EA11127E53315002D4E08 /* MainViewModel.swift */,
+				042EA11627E53343002D4E08 /* PostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -427,8 +433,10 @@
 				042EA0BE27E4E2B2002D4E08 /* PostDescriptionView.swift in Sources */,
 				042EA0FB27E514F0002D4E08 /* NetworkErrorView.swift in Sources */,
 				042EA0F627E51398002D4E08 /* LoaderDot.swift in Sources */,
+				042EA11727E53343002D4E08 /* PostViewModel.swift in Sources */,
 				042EA09527E4C1F8002D4E08 /* NavigationBarView.swift in Sources */,
 				042EA0EE27E5136B002D4E08 /* LoaderView.swift in Sources */,
+				042EA11227E53315002D4E08 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

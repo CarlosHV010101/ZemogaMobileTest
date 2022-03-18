@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-public enum PostSelection: String {
+public enum PostListSelection: String {
     case all, favorites
 }
 
 struct PostsSegmentedControl: View {
-    @Binding private var listSelection: PostSelection
+    @Binding private var listSelection: PostListSelection
     
-    init(listSelection: Binding<PostSelection>) {
+    init(listSelection: Binding<PostListSelection>) {
         self._listSelection = listSelection
         
         UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(.green)
@@ -25,9 +25,9 @@ struct PostsSegmentedControl: View {
     var body: some View {
         Picker("", selection: $listSelection) {
             Text(TextConstants.Posts.segmentedControlAll)
-                .tag(PostSelection.all)
+                .tag(PostListSelection.all)
             Text(TextConstants.Posts.segmentedControlFavorites)
-                .tag(PostSelection.favorites)
+                .tag(PostListSelection.favorites)
         }
         .pickerStyle(SegmentedPickerStyle())
     }
@@ -35,7 +35,7 @@ struct PostsSegmentedControl: View {
 
 struct PostsSegmentedControl_Previews: PreviewProvider {
     static var previews: some View {
-        PostsSegmentedControl(listSelection: .constant(PostSelection.all))
+        PostsSegmentedControl(listSelection: .constant(PostListSelection.all))
             .previewLayout(.sizeThatFits)
     }
 }

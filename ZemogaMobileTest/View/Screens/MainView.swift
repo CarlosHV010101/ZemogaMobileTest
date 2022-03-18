@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct MainView: View {
-    @State private var selection: PostSelection = .all
+    @StateObject private var viewModel: MainViewModel
+    
+    init(viewModel: MainViewModel) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         VStack {
@@ -19,17 +23,17 @@ struct MainView: View {
                 EmptyView()
             } leftButton: {
                 NavigationBarButtonView(
-                    action: { },
-                    icon: IconConstants.ToolBarIcons.reload
+                    action: viewModel.loadPosts,
+                    icon: IconConstants.ToolBarIcons.load
                 )
             }
             
-            PostsSegmentedControl(listSelection: $selection)
+            PostsSegmentedControl(listSelection: $viewModel.currentPostListSelection)
                 .padding(.horizontal, 15)
             
             ScrollView(showsIndicators: false) {
                 
-                switch selection {
+                switch viewModel.currentPostListSelection {
                 case .all:
                     PostsList()
                 case .favorites:
@@ -37,13 +41,13 @@ struct MainView: View {
                 }
             }
             
-            DeletePostsButtonView(action: {})
+            DeletePostsButtonView(action: viewModel.deleteAllPosts)
         }
     }
 }
 
 struct PostsView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(viewModel: MainViewModel())
     }
 }

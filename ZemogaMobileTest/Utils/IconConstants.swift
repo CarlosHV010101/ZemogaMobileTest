@@ -11,7 +11,7 @@ public enum IconConstants {
     
     enum ToolBarIcons {
         static let back = "chevron.backward"
-        static let reload = "arrow.triangle.2.circlepath"
+        static let load = "arrow.triangle.2.circlepath"
         static let favorite = "star"
         static let favoriteSelected = "star.fill"
     }
