@@ -27,6 +27,9 @@ struct PostDetailView: View {
                 }
 
                 PostDescriptionView(postDescription: "struct NavigationBarView <RightButton: View, LeftButton: View>: View {")
+                
+                UserInformationView()
+                
             }
         }
         .edgesIgnoringSafeArea(.top)

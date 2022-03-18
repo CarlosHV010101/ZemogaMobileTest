@@ -15,18 +15,22 @@ struct PostDescriptionView: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 15) {
+        HStack {
+            VStack(alignment: .leading, spacing: 15) {
+                
+                Text(TextConstants.PostDetails.descriptionTitle)
+                    .bold()
+                    .font(.title3)
+                
+                Text(postDescription)
+                    .multilineTextAlignment(.leading)
+                    .font(.caption)
+                    .foregroundColor(.gray)
+            }
+            .padding(.horizontal, 15)
             
-            Text(TextConstants.PostDetails.descriptionTitle)
-                .bold()
-                .font(.title3)
-            
-            Text(postDescription)
-                .multilineTextAlignment(.leading)
-                .font(.caption)
-                .foregroundColor(.gray)
+            Spacer()
         }
-        .padding(.horizontal, 15)
     }
 }
 

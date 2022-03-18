@@ -23,6 +23,7 @@
 		042EA0B027E4D71F002D4E08 /* DeletePostsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0AF27E4D71F002D4E08 /* DeletePostsButtonView.swift */; };
 		042EA0B827E4DAE3002D4E08 /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0B727E4DAE3002D4E08 /* PostDetailView.swift */; };
 		042EA0BE27E4E2B2002D4E08 /* PostDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0BD27E4E2B2002D4E08 /* PostDescriptionView.swift */; };
+		042EA0C627E4E7E0002D4E08 /* UserInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0C527E4E7E0002D4E08 /* UserInformationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		042EA0AF27E4D71F002D4E08 /* DeletePostsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostsButtonView.swift; sourceTree = "<group>"; };
 		042EA0B727E4DAE3002D4E08 /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
 		042EA0BD27E4E2B2002D4E08 /* PostDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDescriptionView.swift; sourceTree = "<group>"; };
+		042EA0C527E4E7E0002D4E08 /* UserInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				042EA0BD27E4E2B2002D4E08 /* PostDescriptionView.swift */,
+				042EA0C527E4E7E0002D4E08 /* UserInformationView.swift */,
 			);
 			path = PostDetail;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				042EA0B827E4DAE3002D4E08 /* PostDetailView.swift in Sources */,
 				042EA05327E4C03E002D4E08 /* SceneDelegate.swift in Sources */,
 				042EA0A627E4C450002D4E08 /* TextConstants.swift in Sources */,
+				042EA0C627E4E7E0002D4E08 /* UserInformationView.swift in Sources */,
 				042EA09E27E4C275002D4E08 /* IconConstants.swift in Sources */,
 				042EA0B027E4D71F002D4E08 /* DeletePostsButtonView.swift in Sources */,
 				042EA0AB27E4D046002D4E08 /* NavigationBarButtonView.swift in Sources */,
