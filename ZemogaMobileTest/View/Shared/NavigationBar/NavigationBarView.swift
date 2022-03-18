@@ -7,10 +7,48 @@
 
 import SwiftUI
 
-struct NavigationBarView: View {
+struct NavigationBarView <RightButton: View, LeftButton: View>: View {
+    private let title: String
+    private let rightButton: RightButton?
+    private let leftButton: LeftButton?
+    
+    init(title: String,
+         @ViewBuilder rightButton: () -> RightButton?,
+         @ViewBuilder leftButton: () -> LeftButton?) {
+        self.title = title
+        self.rightButton = rightButton()
+        self.leftButton = leftButton()
+    }
+    
     var body: some View {
-        HStack {
+        ZStack {
             
+            if rightButton != nil {
+                HStack {
+                    rightButton
+                    
+                    Spacer()
+                }
+                .padding(.leading, 15)
+            }
+            
+            Spacer()
+            
+            Text(title)
+                .font(.title3)
+                .foregroundColor(.white)
+                .padding(.vertical, 15)
+            
+            Spacer()
+            
+            if leftButton != nil {
+                HStack {
+                    Spacer()
+                    
+                    leftButton
+                }
+                .padding(.trailing, 15)
+            }
         }
         .background(Color.green)
     }
@@ -18,6 +56,10 @@ struct NavigationBarView: View {
 
 struct NavigationBarView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationBarView()
+        NavigationBarView(title: "Posts") {
+            EmptyView()
+        } leftButton: {
+            EmptyView()
+        }
     }
 }
