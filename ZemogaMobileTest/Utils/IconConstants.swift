@@ -15,4 +15,8 @@ public enum IconConstants {
         static let favorite = "star"
         static let favoriteSelected = "star.fill"
     }
+    
+    enum Status {
+        static let wifiError = "wifi.slash"
+    }
 }

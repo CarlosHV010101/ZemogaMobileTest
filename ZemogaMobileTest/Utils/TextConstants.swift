@@ -17,4 +17,8 @@ public enum TextConstants {
     enum PostDetails {
         static let descriptionTitle = "Description"
     }
+    
+    enum Status {
+        static let error = "We couldn't load the content. Please verify if your're connected to internet."
+    }
 }

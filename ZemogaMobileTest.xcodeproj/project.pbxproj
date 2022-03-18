@@ -31,6 +31,7 @@
 		042EA0E427E50E3C002D4E08 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0E327E50E3C002D4E08 /* PostCell.swift */; };
 		042EA0EE27E5136B002D4E08 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0ED27E5136B002D4E08 /* LoaderView.swift */; };
 		042EA0F627E51398002D4E08 /* LoaderDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0F527E51398002D4E08 /* LoaderDot.swift */; };
+		042EA0FB27E514F0002D4E08 /* NetworkErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0FA27E514F0002D4E08 /* NetworkErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		042EA0E327E50E3C002D4E08 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		042EA0ED27E5136B002D4E08 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		042EA0F527E51398002D4E08 /* LoaderDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderDot.swift; sourceTree = "<group>"; };
+		042EA0FA27E514F0002D4E08 /* NetworkErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 			children = (
 				042EA0ED27E5136B002D4E08 /* LoaderView.swift */,
 				042EA0F527E51398002D4E08 /* LoaderDot.swift */,
+				042EA0FA27E514F0002D4E08 /* NetworkErrorView.swift */,
 			);
 			path = StateViews;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				042EA0D627E50931002D4E08 /* CommentCellView.swift in Sources */,
 				042EA08B27E4C154002D4E08 /* PostsView.swift in Sources */,
 				042EA0BE27E4E2B2002D4E08 /* PostDescriptionView.swift in Sources */,
+				042EA0FB27E514F0002D4E08 /* NetworkErrorView.swift in Sources */,
 				042EA0F627E51398002D4E08 /* LoaderDot.swift in Sources */,
 				042EA09527E4C1F8002D4E08 /* NavigationBarView.swift in Sources */,
 				042EA0EE27E5136B002D4E08 /* LoaderView.swift in Sources */,
