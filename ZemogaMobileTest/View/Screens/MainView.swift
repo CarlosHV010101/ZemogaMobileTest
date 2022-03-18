@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PostsView: View {
+struct MainView: View {
     @State private var selection: PostSelection = .all
     
     var body: some View {
@@ -44,6 +44,6 @@ struct PostsView: View {
 
 struct PostsView_Previews: PreviewProvider {
     static var previews: some View {
-        PostsView()
+        MainView()
     }
 }

@@ -15,7 +15,7 @@
 		042EA05D27E4C03E002D4E08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042EA05B27E4C03E002D4E08 /* LaunchScreen.storyboard */; };
 		042EA06827E4C03F002D4E08 /* ZemogaMobileTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA06727E4C03F002D4E08 /* ZemogaMobileTestTests.swift */; };
 		042EA07327E4C03F002D4E08 /* ZemogaMobileTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA07227E4C03F002D4E08 /* ZemogaMobileTestUITests.swift */; };
-		042EA08B27E4C154002D4E08 /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA08A27E4C154002D4E08 /* PostsView.swift */; };
+		042EA08B27E4C154002D4E08 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA08A27E4C154002D4E08 /* MainView.swift */; };
 		042EA09527E4C1F8002D4E08 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA09427E4C1F8002D4E08 /* NavigationBarView.swift */; };
 		042EA09E27E4C275002D4E08 /* IconConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA09D27E4C275002D4E08 /* IconConstants.swift */; };
 		042EA0A627E4C450002D4E08 /* TextConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA0A527E4C450002D4E08 /* TextConstants.swift */; };
@@ -67,7 +67,7 @@
 		042EA06E27E4C03F002D4E08 /* ZemogaMobileTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZemogaMobileTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		042EA07227E4C03F002D4E08 /* ZemogaMobileTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZemogaMobileTestUITests.swift; sourceTree = "<group>"; };
 		042EA07427E4C03F002D4E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		042EA08A27E4C154002D4E08 /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
+		042EA08A27E4C154002D4E08 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		042EA09427E4C1F8002D4E08 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		042EA09D27E4C275002D4E08 /* IconConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconConstants.swift; sourceTree = "<group>"; };
 		042EA0A527E4C450002D4E08 /* TextConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConstants.swift; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 		042EA08927E4C12C002D4E08 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				042EA08A27E4C154002D4E08 /* PostsView.swift */,
+				042EA08A27E4C154002D4E08 /* MainView.swift */,
 				042EA0B727E4DAE3002D4E08 /* PostDetailView.swift */,
 			);
 			path = Screens;
@@ -423,7 +423,7 @@
 				042EA10027E51A54002D4E08 /* PostsSegmentedControl.swift in Sources */,
 				042EA05527E4C03E002D4E08 /* ContentView.swift in Sources */,
 				042EA0D627E50931002D4E08 /* CommentCellView.swift in Sources */,
-				042EA08B27E4C154002D4E08 /* PostsView.swift in Sources */,
+				042EA08B27E4C154002D4E08 /* MainView.swift in Sources */,
 				042EA0BE27E4E2B2002D4E08 /* PostDescriptionView.swift in Sources */,
 				042EA0FB27E514F0002D4E08 /* NetworkErrorView.swift in Sources */,
 				042EA0F627E51398002D4E08 /* LoaderDot.swift in Sources */,
