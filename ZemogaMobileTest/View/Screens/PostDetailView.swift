@@ -30,6 +30,7 @@ struct PostDetailView: View {
                 
                 UserInformationView()
                 
+                CommentsSectionView()
             }
         }
         .edgesIgnoringSafeArea(.top)

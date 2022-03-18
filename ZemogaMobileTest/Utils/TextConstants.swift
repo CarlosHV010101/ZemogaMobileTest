@@ -10,7 +10,7 @@ import Foundation
 public enum TextConstants {
     
     enum Posts {
-        static let navigationBarTitle = "Post"
+        static let navigationBarTitle = "Posts"
         static let deleteAllButtonTitle = "Delete All"
     }
     

@@ -21,10 +21,9 @@ struct PostsView: View {
                     icon: IconConstants.ToolBarIcons.reload
                 )
             }
-
             
-            ScrollView {
-                
+            ScrollView(showsIndicators: false) {
+                PostsList()
             }
             
             DeletePostsButtonView(action: {})
