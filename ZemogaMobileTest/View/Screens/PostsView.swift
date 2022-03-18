@@ -9,7 +9,24 @@ import SwiftUI
 
 struct PostsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            
+            NavigationBarView(
+                title: TextConstants.Posts.navigationBarTitle
+            ) {
+                EmptyView()
+            } leftButton: {
+                NavigationBarButtonView(
+                    action: { },
+                    icon: IconConstants.ToolBarIcons.reload
+                )
+            }
+
+            
+            ScrollView {
+                
+            }
+        }
     }
 }
 

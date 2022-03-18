@@ -50,16 +50,20 @@ struct NavigationBarView <RightButton: View, LeftButton: View>: View {
                 .padding(.trailing, 15)
             }
         }
-        .background(Color.green)
+        .background(Color.green.edgesIgnoringSafeArea(.top))
     }
 }
 
 struct NavigationBarView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationBarView(title: "Posts") {
-            EmptyView()
+            NavigationBarButtonView(
+                action: { },
+                icon: IconConstants.ToolBarIcons.back
+            )
         } leftButton: {
-            EmptyView()
+            NavigationBarButtonView(action: { }, icon: IconConstants.ToolBarIcons.favoriteSelected)
         }
+        .previewLayout(.sizeThatFits)
     }
 }
