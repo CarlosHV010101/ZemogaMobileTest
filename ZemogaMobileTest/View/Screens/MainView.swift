@@ -55,6 +55,12 @@ struct MainView: View {
 
 struct PostsView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(viewModel: MainViewModel())
+        MainView(
+            viewModel: MainViewModel(
+                repository: PostRepository(
+                    network: PostNetwork()
+                )
+            )
+        )
     }
 }

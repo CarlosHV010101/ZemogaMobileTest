@@ -16,6 +16,27 @@ protocol PostRepositoryDelegate: AnyObject {
     func didFailGetUser()
 }
 
+extension PostRepositoryDelegate {
+    func didUpdatePostsWithSuccess(_ posts: [Post]) {
+        return
+    }
+    func didFailGetPosts() {
+        return
+    }
+    func didUpdateCommentsWithSuccess(_ comments: [Comment]) {
+        return
+    }
+    func didFailGetComments() {
+        return
+    }
+    func didUpdateUserWithSuccess(_ user: User) {
+        return
+    }
+    func didFailGetUser() {
+        return 
+    }
+}
+
 protocol PostRepositoryProtocol {
     var delegate: PostRepositoryDelegate? { get set }
     var network: PostNetworkProtocol { get }

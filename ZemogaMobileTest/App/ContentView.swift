@@ -9,8 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        MainView(viewModel: MainViewModel())
-            .preferredColorScheme(.light)
+        MainView(
+            viewModel: MainViewModel(
+                repository: PostRepository(
+                    network: PostNetwork()
+                )
+            )
+        )
+        .preferredColorScheme(.light)
     }
 }
 

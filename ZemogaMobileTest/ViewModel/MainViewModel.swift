@@ -13,11 +13,29 @@ final class MainViewModel: ObservableObject {
     @Published var favoritePosts: [PostViewModel] = []
     @Published var currentPostListSelection: PostListSelection = .all
     
+    private var postRepository: PostRepositoryProtocol
+    
+    init(repository: PostRepositoryProtocol) {
+        self.postRepository = repository
+        self.postRepository.delegate = self
+    }
+    
     public func loadPosts() {
-        
+        postRepository.getPosts()
     }
     
     public func deleteAllPosts() {
+        
+    }
+}
+
+//MARK: - PostRepositoryDelegate
+extension MainViewModel: PostRepositoryDelegate {
+    func didUpdatePostsWithSuccess(_ posts: [Post]) {
+        
+    }
+    
+    func didFailGetPosts() {
         
     }
 }
