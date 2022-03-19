@@ -37,8 +37,10 @@ struct MainView: View {
                         
                         if viewModel.isLoadingPosts {
                             LoaderView()
+                                .padding()
                         } else if viewModel.getPostsHasError {
                             NetworkErrorView()
+                                .padding()
                         } else {
                             switch viewModel.currentPostListSelection {
                             case .all:
