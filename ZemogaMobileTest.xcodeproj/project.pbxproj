@@ -37,6 +37,7 @@
 		042EA11727E53343002D4E08 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA11627E53343002D4E08 /* PostViewModel.swift */; };
 		04C680A827E578EF00F52094 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C680A727E578EF00F52094 /* UserViewModel.swift */; };
 		04C680B027E57C6500F52094 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C680AF27E57C6500F52094 /* CommentViewModel.swift */; };
+		04C680BD27E58EE700F52094 /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C680BC27E58EE700F52094 /* PostRepository.swift */; };
 		04F10B6A27E54525009DC48F /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F10B6927E54525009DC48F /* PostDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,7 @@
 		042EA11627E53343002D4E08 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		04C680A727E578EF00F52094 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		04C680AF27E57C6500F52094 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
+		04C680BC27E58EE700F52094 /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
 		04F10B6927E54525009DC48F /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +147,8 @@
 		042EA04F27E4C03E002D4E08 /* ZemogaMobileTest */ = {
 			isa = PBXGroup;
 			children = (
+				04C680BB27E58EC900F52094 /* Repository */,
+				04C680BA27E58E7C00F52094 /* Network */,
 				042EA10427E53102002D4E08 /* App */,
 				042EA09C27E4C23D002D4E08 /* Utils */,
 				042EA08827E4C120002D4E08 /* Model */,
@@ -293,6 +297,21 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		04C680BA27E58E7C00F52094 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		04C680BB27E58EC900F52094 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				04C680BC27E58EE700F52094 /* PostRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -439,6 +458,7 @@
 				042EA05527E4C03E002D4E08 /* ContentView.swift in Sources */,
 				042EA0D627E50931002D4E08 /* CommentView.swift in Sources */,
 				042EA08B27E4C154002D4E08 /* MainView.swift in Sources */,
+				04C680BD27E58EE700F52094 /* PostRepository.swift in Sources */,
 				04C680B027E57C6500F52094 /* CommentViewModel.swift in Sources */,
 				042EA0BE27E4E2B2002D4E08 /* PostDescriptionView.swift in Sources */,
 				04F10B6A27E54525009DC48F /* PostDetailViewModel.swift in Sources */,
