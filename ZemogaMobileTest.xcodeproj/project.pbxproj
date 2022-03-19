@@ -41,6 +41,8 @@
 		04C680C227E58FDA00F52094 /* PostNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C680C127E58FDA00F52094 /* PostNetwork.swift */; };
 		04C680C727E590F900F52094 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C680C627E590F900F52094 /* URLConstants.swift */; };
 		04C680CC27E5920800F52094 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C680CB27E5920800F52094 /* PostModel.swift */; };
+		04C680D127E597D500F52094 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C680D027E597D500F52094 /* CommentModel.swift */; };
+		04C680D627E59CDA00F52094 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C680D527E59CDA00F52094 /* UserModel.swift */; };
 		04F10B6A27E54525009DC48F /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F10B6927E54525009DC48F /* PostDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +104,8 @@
 		04C680C127E58FDA00F52094 /* PostNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNetwork.swift; sourceTree = "<group>"; };
 		04C680C627E590F900F52094 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		04C680CB27E5920800F52094 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		04C680D027E597D500F52094 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
+		04C680D527E59CDA00F52094 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		04F10B6927E54525009DC48F /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,6 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				04C680CB27E5920800F52094 /* PostModel.swift */,
+				04C680D027E597D500F52094 /* CommentModel.swift */,
+				04C680D527E59CDA00F52094 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -471,11 +477,13 @@
 				042EA08B27E4C154002D4E08 /* MainView.swift in Sources */,
 				04C680C227E58FDA00F52094 /* PostNetwork.swift in Sources */,
 				04C680BD27E58EE700F52094 /* PostRepository.swift in Sources */,
+				04C680D127E597D500F52094 /* CommentModel.swift in Sources */,
 				04C680B027E57C6500F52094 /* CommentViewModel.swift in Sources */,
 				042EA0BE27E4E2B2002D4E08 /* PostDescriptionView.swift in Sources */,
 				04F10B6A27E54525009DC48F /* PostDetailViewModel.swift in Sources */,
 				042EA0FB27E514F0002D4E08 /* NetworkErrorView.swift in Sources */,
 				042EA0F627E51398002D4E08 /* LoaderDot.swift in Sources */,
+				04C680D627E59CDA00F52094 /* UserModel.swift in Sources */,
 				042EA11727E53343002D4E08 /* PostViewModel.swift in Sources */,
 				042EA09527E4C1F8002D4E08 /* NavigationBarView.swift in Sources */,
 				042EA0EE27E5136B002D4E08 /* LoaderView.swift in Sources */,
