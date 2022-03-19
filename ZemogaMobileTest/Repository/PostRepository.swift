@@ -57,6 +57,7 @@ class PostRepository: PostRepositoryProtocol {
         network.getPosts { posts in
             self.delegate?.didUpdatePostsWithSuccess(posts)
         } onError: { error in
+            debugPrint("ON POST ERROR", error)
             self.delegate?.didFailGetPosts()
         }
     }
@@ -65,6 +66,7 @@ class PostRepository: PostRepositoryProtocol {
         network.getComments(with: id) { (comments) in
             self.delegate?.didUpdateCommentsWithSuccess(comments)
         } onError: { error in
+            debugPrint("ON COMMENTS ERROR", error)
             self.delegate?.didFailGetComments()
         }
     }
@@ -73,6 +75,7 @@ class PostRepository: PostRepositoryProtocol {
         network.getUser(with: userId) { user in
             self.delegate?.didUpdateUserWithSuccess(user)
         } onError: { error in
+            debugPrint("ON USER ERROR", error)
             self.delegate?.didFailGetUser()
         }
     }

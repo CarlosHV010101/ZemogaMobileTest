@@ -17,9 +17,8 @@ struct UserInformationView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 10) {
-                Text(TextConstants.PostDetails.User.user)
-                    .bold()
-                    .font(.title3)
+                
+                UserInformationHeader()
                 
                 Text(TextConstants.PostDetails.User.name + viewModel.name)
                     .font(.footnote)

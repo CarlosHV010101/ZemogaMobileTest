@@ -35,11 +35,17 @@ struct MainView: View {
                     
                     ScrollView(showsIndicators: false) {
                         
-                        switch viewModel.currentPostListSelection {
-                        case .all:
-                            PostsList(posts: $viewModel.allPosts)
-                        case .favorites:
-                            PostsList(posts: $viewModel.favoritePosts)
+                        if viewModel.isLoadingPosts {
+                            LoaderView()
+                        } else if viewModel.getPostsHasError {
+                            NetworkErrorView()
+                        } else {
+                            switch viewModel.currentPostListSelection {
+                            case .all:
+                                PostsList(posts: $viewModel.allPosts)
+                            case .favorites:
+                                PostsList(posts: $viewModel.favoritePosts)
+                            }
                         }
                     }
                 }

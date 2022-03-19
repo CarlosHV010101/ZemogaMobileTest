@@ -12,6 +12,8 @@ final class MainViewModel: ObservableObject {
     @Published var allPosts: [PostViewModel] = []
     @Published var favoritePosts: [PostViewModel] = []
     @Published var currentPostListSelection: PostListSelection = .all
+    @Published var isLoadingPosts: Bool = false
+    @Published var getPostsHasError: Bool = false
     
     private var postRepository: PostRepositoryProtocol
     
@@ -21,21 +23,44 @@ final class MainViewModel: ObservableObject {
     }
     
     public func loadPosts() {
+        isLoadingPosts = true
         postRepository.getPosts()
     }
     
     public func deleteAllPosts() {
-        
+        allPosts.removeAll()
+        favoritePosts.removeAll()
+    }
+    
+    private func filterFavorites(_ posts: [PostViewModel]) -> [PostViewModel] {
+        return posts.filter { $0.isFavorite }
+    }
+    
+    private func sortAll(_ posts: [PostViewModel]) {
+        self.allPosts = posts
     }
 }
 
 //MARK: - PostRepositoryDelegate
 extension MainViewModel: PostRepositoryDelegate {
     func didUpdatePostsWithSuccess(_ posts: [Post]) {
+        self.isLoadingPosts = false
+        self.getPostsHasError = false
+        let posts = posts.map { post -> PostViewModel in
+            PostViewModel(id: post.id ?? 0,
+                          userId: post.userId ?? 0,
+                          title: post.title ?? "",
+                          body: post.body ?? "",
+                          isFavorite: true)
+        }
         
+        self.favoritePosts = filterFavorites(posts)
+        
+        self.sortAll(posts)
     }
     
     func didFailGetPosts() {
-        
+        self.isLoadingPosts = false
+        self.getPostsHasError = true
     }
 }

@@ -43,6 +43,7 @@
 		04C680CC27E5920800F52094 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C680CB27E5920800F52094 /* PostModel.swift */; };
 		04C680D127E597D500F52094 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C680D027E597D500F52094 /* CommentModel.swift */; };
 		04C680D627E59CDA00F52094 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C680D527E59CDA00F52094 /* UserModel.swift */; };
+		04D97BF727E63ED000FC36F8 /* UserInformationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97BF627E63ED000FC36F8 /* UserInformationHeader.swift */; };
 		04F10B6A27E54525009DC48F /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F10B6927E54525009DC48F /* PostDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +107,7 @@
 		04C680CB27E5920800F52094 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		04C680D027E597D500F52094 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		04C680D527E59CDA00F52094 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		04D97BF627E63ED000FC36F8 /* UserInformationHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationHeader.swift; sourceTree = "<group>"; };
 		04F10B6927E54525009DC48F /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -277,6 +279,7 @@
 				042EA0CB27E50849002D4E08 /* CommentsSectionView.swift */,
 				042EA0D027E508BF002D4E08 /* CommentsHeaderView.swift */,
 				042EA0D527E50931002D4E08 /* CommentView.swift */,
+				04D97BF627E63ED000FC36F8 /* UserInformationHeader.swift */,
 			);
 			path = PostDetail;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				042EA0A627E4C450002D4E08 /* TextConstants.swift in Sources */,
 				042EA0CC27E50849002D4E08 /* CommentsSectionView.swift in Sources */,
 				042EA0C627E4E7E0002D4E08 /* UserInformationView.swift in Sources */,
+				04D97BF727E63ED000FC36F8 /* UserInformationHeader.swift in Sources */,
 				042EA09E27E4C275002D4E08 /* IconConstants.swift in Sources */,
 				042EA0B027E4D71F002D4E08 /* DeletePostsButtonView.swift in Sources */,
 				042EA0AB27E4D046002D4E08 /* NavigationBarButtonView.swift in Sources */,

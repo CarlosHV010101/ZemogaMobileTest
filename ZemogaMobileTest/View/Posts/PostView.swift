@@ -20,7 +20,10 @@ struct PostView: View {
             NavigationLink(
                 destination: PostDetailView(
                     viewModel: PostDetailViewModel(
-                        post: viewModel
+                        post: viewModel,
+                        repository: PostRepository(
+                            network: PostNetwork()
+                        )
                     )
                 ),
                 tag: PostViewModel.Router.details,
@@ -57,6 +60,7 @@ struct PostCell_Previews: PreviewProvider {
         PostView(
             viewModel: PostViewModel(
                 id: 1,
+                userId: 25,
                 title: "This is a preview",
                 body: "Body",
                 isFavorite: false

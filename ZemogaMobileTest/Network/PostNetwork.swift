@@ -73,7 +73,7 @@ final class PostNetwork: PostNetworkProtocol {
                      onError: @escaping onError
     ) {
     
-        guard let url = URL(string: "\(URLContants.BASE_URL)/\(id)\(URLContants.COMMENTS_URL)") else {
+        guard let url = URL(string: "\(URLContants.BASE_URL)\(URLContants.POSTS_URL)/\(id)\(URLContants.COMMENTS_URL)") else {
             onError("Invalid URL")
             return
         }

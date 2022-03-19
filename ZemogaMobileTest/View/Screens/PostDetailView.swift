@@ -34,11 +34,42 @@ struct PostDetailView: View {
                 
                 PostDescriptionView(postDescription: viewModel.currentPost.body)
                 
-                if viewModel.user != nil {
-                    UserInformationView(viewModel: viewModel.user!)
+                if viewModel.isLoadingUser {
+                    VStack {
+                        UserInformationHeader()
+                        
+                        LoaderView()
+                            .padding()
+                    }
+                } else if viewModel.getUserHasError {
+                    VStack {
+                        UserInformationHeader()
+                        
+                        NetworkErrorView()
+                            .padding()
+                    }
+                } else {
+                    if viewModel.user != nil {
+                        UserInformationView(viewModel: viewModel.user!)
+                    }
                 }
                 
-                CommentsSectionView(comments: $viewModel.comments)
+                if viewModel.isLoadingComments {
+                    VStack {
+                        CommentsHeaderView()
+                        
+                        LoaderView()
+                    }
+                } else if viewModel.getCommentsHasError {
+                    VStack {
+                        CommentsHeaderView()
+                        
+                        NetworkErrorView()
+                            .padding()
+                    }
+                } else {
+                    CommentsSectionView(comments: $viewModel.comments)
+                }
             }
         }
         .edgesIgnoringSafeArea(.top)
@@ -52,9 +83,13 @@ struct PostDetailView_Previews: PreviewProvider {
             viewModel: PostDetailViewModel(
                 post: PostViewModel(
                     id: 0,
+                    userId: 25,
                     title: "Title",
                     body: "",
                     isFavorite: false
+                ),
+                repository: PostRepository(
+                    network: PostNetwork()
                 )
             )
         )
