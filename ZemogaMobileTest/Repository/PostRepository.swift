@@ -45,6 +45,8 @@ protocol PostRepositoryProtocol {
     func getPosts()
     func getComments(with id: Int)
     func getUser(with userId: Int)
+    func toggleFavorite(postId: Int)
+    func removePost(postId: Int)
 }
 
 class PostRepository: PostRepositoryProtocol {
@@ -157,6 +159,14 @@ class PostRepository: PostRepositoryProtocol {
             
             self.delegate?.didFailGetUser()
         }
+    }
+    
+    public func toggleFavorite(postId: Int) {
+        self.database.deleteAll()
+    }
+    
+    public func removePost(postId: Int) {
+        self.database.deletePost(with: postId)
     }
     
     private func isOffline(networkError: String) -> Bool {

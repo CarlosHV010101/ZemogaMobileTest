@@ -38,11 +38,11 @@ final class PostDetailViewModel: ObservableObject {
     }
     
     public func toggleFavorite() {
-        
+        postRepository.toggleFavorite(postId: currentPost.id)
     }
     
     public func removePost() {
-        
+        postRepository.removePost(postId: currentPost.id)
     }
 }
 

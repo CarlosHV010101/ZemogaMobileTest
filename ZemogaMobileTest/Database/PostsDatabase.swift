@@ -10,8 +10,9 @@ import Foundation
 protocol PostDatabaseProtocol {
     func savePost(_ post: PostDatabaseModel)
     func fetchPosts() -> [PostDatabaseModel]
+    func deletePost(with id: Int) 
     func toggleFavoriteStatus()
-    func deleteAllPosts()
+    func deleteAll()
     func saveComment(_ comment: CommentDatabaseModel)
     func fetchComments(with postId: Int) -> [CommentDatabaseModel]
     func saveUser(_ user: UserDatabaseModel)
@@ -28,11 +29,15 @@ final class PostDatabase: PostDatabaseProtocol {
         return []
     }
     
+    func deletePost(with id: Int) {
+        
+    }
+    
     func toggleFavoriteStatus() {
         
     }
     
-    func deleteAllPosts() {
+    func deleteAll() {
         
     }
     
