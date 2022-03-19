@@ -37,6 +37,7 @@ final class MainViewModel: ObservableObject {
     }
     
     private func sortAll(_ posts: [PostViewModel]) {
+        //TODO: SORT POSTS
         self.allPosts = posts
     }
 }
