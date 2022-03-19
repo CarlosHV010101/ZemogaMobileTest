@@ -8,27 +8,32 @@
 import SwiftUI
 
 struct UserInformationView: View {
+    @StateObject private var viewModel: UserViewModel
+    
+    init(viewModel: UserViewModel) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 10) {
-                Text("User")
+                Text(TextConstants.PostDetails.User.user)
                     .bold()
                     .font(.title3)
                 
-                Text("Name")
+                Text(TextConstants.PostDetails.User.name + viewModel.name)
                     .font(.footnote)
                     .foregroundColor(.gray)
                 
-                Text("Email")
+                Text(TextConstants.PostDetails.User.email + viewModel.email)
                     .font(.footnote)
                     .foregroundColor(.gray)
                 
-                Text("Phone")
+                Text(TextConstants.PostDetails.User.phone + viewModel.phone)
                     .font(.footnote)
                     .foregroundColor(.gray)
                 
-                Text("Website")
+                Text(TextConstants.PostDetails.User.website + viewModel.website)
                     .font(.footnote)
                     .foregroundColor(.gray)
             }
@@ -42,7 +47,15 @@ struct UserInformationView: View {
 
 struct UserInformationView_Previews: PreviewProvider {
     static var previews: some View {
-        UserInformationView()
-            .previewLayout(.sizeThatFits)
+        UserInformationView(
+            viewModel: UserViewModel(
+                id: 1,
+                name: "Carlos",
+                email: "chedezv@gmail.com",
+                phone: "55555555",
+                website: "www.google.com"
+            )
+        )
+        .previewLayout(.sizeThatFits)
     }
 }

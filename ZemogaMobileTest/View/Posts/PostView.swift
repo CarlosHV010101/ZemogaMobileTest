@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PostCell: View {
+struct PostView: View {
     @StateObject private var viewModel: PostViewModel
     
     init(viewModel: PostViewModel) {
@@ -18,7 +18,11 @@ struct PostCell: View {
         VStack {
             
             NavigationLink(
-                destination: PostDetailView(),
+                destination: PostDetailView(
+                    viewModel: PostDetailViewModel(
+                        post: viewModel
+                    )
+                ),
                 tag: PostViewModel.Router.details,
                 selection: $viewModel.route,
                 label: { EmptyView() }
@@ -27,9 +31,9 @@ struct PostCell: View {
             HStack {
                             
                 Image(systemName: IconConstants.PostCell.star)
-                    .foregroundColor(.yellow)
+                    .foregroundColor(viewModel.isFavorite ? .yellow : .clear)
                 
-                Text("Secondary line text Lorem Ipsum amet, consectur adispicing elit. Nam massa quam")
+                Text(viewModel.title)
                     .font(.footnote)
                     .foregroundColor(.gray)
                 
@@ -50,6 +54,13 @@ struct PostCell: View {
 
 struct PostCell_Previews: PreviewProvider {
     static var previews: some View {
-        PostCell(viewModel: PostViewModel())
+        PostView(
+            viewModel: PostViewModel(
+                id: 1,
+                title: "This is a preview",
+                body: "Body",
+                isFavorite: false
+            )
+        )
     }
 }

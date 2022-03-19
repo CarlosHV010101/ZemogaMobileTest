@@ -17,7 +17,16 @@ public enum TextConstants {
     }
     
     enum PostDetails {
+        static let navigationBarTitle = "Post"
         static let descriptionTitle = "Description"
+        
+        enum User {
+            static let user = "User"
+            static let name = "Name: "
+            static let email = "Email: "
+            static let phone = "Phone: "
+            static let website = "Website: "
+        }
     }
     
     enum Status {

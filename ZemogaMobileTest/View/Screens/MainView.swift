@@ -29,7 +29,7 @@ struct MainView: View {
                     )
                 }
                 
-                VStack(spacing: 50) {
+                VStack {
                     PostsSegmentedControl(listSelection: $viewModel.currentPostListSelection)
                         .padding(.horizontal, 15)
                     
@@ -37,9 +37,9 @@ struct MainView: View {
                         
                         switch viewModel.currentPostListSelection {
                         case .all:
-                            PostsList()
+                            PostsList(posts: $viewModel.allPosts)
                         case .favorites:
-                            PostsList()
+                            PostsList(posts: $viewModel.favoritePosts)
                         }
                     }
                 }

@@ -9,8 +9,8 @@ import Foundation
 
 final class MainViewModel: ObservableObject {
     
-    @Published var allPosts = 1
-    @Published var favoritePosts = 2
+    @Published var allPosts: [PostViewModel] = []
+    @Published var favoritePosts: [PostViewModel] = []
     @Published var currentPostListSelection: PostListSelection = .all
     
     public func loadPosts() {

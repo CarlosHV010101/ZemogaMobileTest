@@ -7,7 +7,12 @@
 
 import SwiftUI
 
-struct CommentCellView: View {
+struct CommentView: View {
+    @StateObject private var viewModel: CommentViewModel
+    
+    init(viewModel: CommentViewModel) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         VStack {
@@ -26,6 +31,6 @@ struct CommentCellView: View {
 
 struct CommentCellView_Previews: PreviewProvider {
     static var previews: some View {
-        CommentCellView()
+        CommentView(viewModel: CommentViewModel(id: 1, body: ""))
     }
 }

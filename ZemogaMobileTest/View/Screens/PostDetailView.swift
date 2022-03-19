@@ -9,28 +9,36 @@ import SwiftUI
 
 struct PostDetailView: View {
     @Environment(\.presentationMode) var presentationMode
+    @StateObject private var viewModel: PostDetailViewModel
+    
+    init(viewModel: PostDetailViewModel) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         ScrollView {
+            
             VStack {
                 NavigationBarView(
-                    title: "Post") {
+                    title: TextConstants.PostDetails.navigationBarTitle) {
                     NavigationBarButtonView(
                         action: { presentationMode.wrappedValue.dismiss() },
                         icon: IconConstants.ToolBarIcons.back
                     )
                 } leftButton: {
                     NavigationBarButtonView(
-                        action: { },
+                        action: viewModel.toggleFavorite,
                         icon: IconConstants.ToolBarIcons.favorite
                     )
                 }
-
-                PostDescriptionView(postDescription: "struct NavigationBarView <RightButton: View, LeftButton: View>: View {")
                 
-                UserInformationView()
+                PostDescriptionView(postDescription: viewModel.currentPost.body)
                 
-                CommentsSectionView()
+                if viewModel.user != nil {
+                    UserInformationView(viewModel: viewModel.user!)
+                }
+                
+                CommentsSectionView(comments: $viewModel.comments)
             }
         }
         .edgesIgnoringSafeArea(.top)
@@ -40,6 +48,15 @@ struct PostDetailView: View {
 
 struct PostDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PostDetailView()
+        PostDetailView(
+            viewModel: PostDetailViewModel(
+                post: PostViewModel(
+                    id: 0,
+                    title: "Title",
+                    body: "",
+                    isFavorite: false
+                )
+            )
+        )
     }
 }

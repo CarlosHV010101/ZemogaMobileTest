@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct PostsList: View {
+    @Binding private var posts: [PostViewModel]
+    
+    init(posts: Binding<[PostViewModel]>) {
+        self._posts = posts
+    }
+    
     var body: some View {
         
         VStack {
-            ForEach(1..<5, id: \.self) { _ in
-                PostCell(viewModel: PostViewModel())
+            ForEach(posts, id: \.id) { post in
+                PostView(viewModel: post)
             }
         }
     }
@@ -20,7 +26,7 @@ struct PostsList: View {
 
 struct PostsLists_Previews: PreviewProvider {
     static var previews: some View {
-        PostsList()
+        PostsList(posts: .constant([]))
             .previewLayout(.sizeThatFits)
     }
 }

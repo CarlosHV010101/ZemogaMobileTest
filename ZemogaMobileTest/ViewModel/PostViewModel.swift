@@ -9,8 +9,18 @@ import Foundation
 
 final class PostViewModel: ObservableObject {
     
+    @Published var id: Int
+    @Published var title: String
+    @Published var body: String
+    @Published var isFavorite: Bool
     @Published var route: Router?
     
+    init(id: Int, title: String, body: String, isFavorite: Bool) {
+        self.id = id
+        self.title = title
+        self.body = body
+        self.isFavorite = isFavorite
+    }
     
     public func goToDetails() {
         self.route = .details

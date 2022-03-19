@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct CommentsSectionView: View {
+    @Binding private var comments: [CommentViewModel]
+    
+    init(comments: Binding<[CommentViewModel]>) {
+        self._comments = comments
+    }
     
     var body: some View {
         VStack {
             CommentsHeaderView()
             
-            ForEach(0..<3, id: \.self) { _ in
-                CommentCellView()
+            ForEach(comments, id: \.id) { comment in
+                CommentView(viewModel: comment)
             }
         }
     }
@@ -22,6 +27,6 @@ struct CommentsSectionView: View {
 
 struct CommentsSectionView_Previews: PreviewProvider {
     static var previews: some View {
-        CommentsSectionView()
+        CommentsSectionView(comments: .constant([]))
     }
 }
