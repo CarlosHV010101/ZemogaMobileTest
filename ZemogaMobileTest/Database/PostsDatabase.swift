@@ -8,17 +8,24 @@
 import Foundation
 
 protocol PostDatabaseProtocol {
-    func savePost()
+    func savePost(_ post: PostDatabaseModel)
+    func fetchPosts() -> [PostDatabaseModel]
     func toggleFavoriteStatus()
     func deleteAllPosts()
-    func saveComment()
-    func saveUser()
+    func saveComment(_ comment: CommentDatabaseModel)
+    func fetchComments(with postId: Int) -> [CommentDatabaseModel]
+    func saveUser(_ user: UserDatabaseModel)
+    func fetchUser(with id: Int) -> UserDatabaseModel?
 }
 
 final class PostDatabase: PostDatabaseProtocol {
     
-    func savePost() {
+    func savePost(_ post: PostDatabaseModel) {
         
+    }
+    
+    func fetchPosts() -> [PostDatabaseModel] {
+        return []
     }
     
     func toggleFavoriteStatus() {
@@ -29,11 +36,19 @@ final class PostDatabase: PostDatabaseProtocol {
         
     }
     
-    func saveComment() {
+    func saveComment(_ comment: CommentDatabaseModel) {
         
     }
     
-    func saveUser() {
+    func fetchComments(with postId: Int) -> [CommentDatabaseModel] {
+        return []
+    }
+    
+    func saveUser(_ user: UserDatabaseModel) {
         
-    }    
+    }
+    
+    func fetchUser(with id: Int) -> UserDatabaseModel? {
+        return nil
+    }
 }

@@ -66,7 +66,9 @@ struct PostsView_Previews: PreviewProvider {
         MainView(
             viewModel: MainViewModel(
                 repository: PostRepository(
-                    network: PostNetwork()
+                    network: PostNetwork(),
+                    database: PostDatabase(),
+                    modelAdapter: PostsModelAdapter()
                 )
             )
         )

@@ -90,7 +90,9 @@ struct PostDetailView_Previews: PreviewProvider {
                     isFavorite: false
                 ),
                 repository: PostRepository(
-                    network: PostNetwork()
+                    network: PostNetwork(),
+                    database: PostDatabase(),
+                    modelAdapter: PostsModelAdapter()
                 )
             )
         )

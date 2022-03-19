@@ -12,7 +12,9 @@ struct ContentView: View {
         MainView(
             viewModel: MainViewModel(
                 repository: PostRepository(
-                    network: PostNetwork()
+                    network: PostNetwork(),
+                    database: PostDatabase(),
+                    modelAdapter: PostsModelAdapter()
                 )
             )
         )

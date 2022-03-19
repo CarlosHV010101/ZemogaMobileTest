@@ -40,6 +40,8 @@ extension PostRepositoryDelegate {
 protocol PostRepositoryProtocol {
     var delegate: PostRepositoryDelegate? { get set }
     var network: PostNetworkProtocol { get }
+    var database: PostDatabaseProtocol { get }
+    var modelAdapter: PostsModelAdapterProtocol { get }
     func getPosts()
     func getComments(with id: Int)
     func getUser(with userId: Int)
@@ -48,36 +50,113 @@ protocol PostRepositoryProtocol {
 class PostRepository: PostRepositoryProtocol {
     weak var delegate: PostRepositoryDelegate?
     var network: PostNetworkProtocol
+    var database: PostDatabaseProtocol
+    var modelAdapter: PostsModelAdapterProtocol
     
-    init(network: PostNetworkProtocol) {
+    init(network: PostNetworkProtocol,
+         database: PostDatabaseProtocol,
+         modelAdapter: PostsModelAdapterProtocol) {
         self.network = network
+        self.database = database
+        self.modelAdapter = modelAdapter
     }
     
     public func getPosts() {
         network.getPosts { posts in
-            self.delegate?.didUpdatePostsWithSuccess(posts)
+            
+            posts.forEach { post in
+                self.database.savePost(self.modelAdapter.toDatabaseModel(from: post))
+            }
+            
+            let savedPosts =  self.database.fetchPosts()
+            
+            self.delegate?.didUpdatePostsWithSuccess(
+                self.modelAdapter.toNetworkModel(
+                    from: savedPosts
+                )
+            )
         } onError: { error in
-            debugPrint("ON POST ERROR", error)
+            
+            if self.isOffline(networkError: error) {
+                
+                let savedPosts = self.database.fetchPosts()
+                
+                guard !savedPosts.isEmpty else {
+                    self.delegate?.didFailGetPosts()
+                    return
+                }
+                
+                self.delegate?.didUpdatePostsWithSuccess(
+                    self.modelAdapter.toNetworkModel(
+                        from: savedPosts
+                    )
+                )
+                return
+            }
+            
             self.delegate?.didFailGetPosts()
         }
     }
     
     public func getComments(with id: Int) {
-        network.getComments(with: id) { (comments) in
+        network.getComments(with: id) { comments in
+            
+            comments.forEach { comment in
+                self.database.saveComment(self.modelAdapter.toDatabaseModel(from: comment))
+            }
+            
             self.delegate?.didUpdateCommentsWithSuccess(comments)
+            
         } onError: { error in
-            debugPrint("ON COMMENTS ERROR", error)
+            
+            if self.isOffline(networkError: error) {
+                
+                let savedComments = self.database.fetchComments(with: id)
+                
+                guard !savedComments.isEmpty else {
+                    self.delegate?.didFailGetComments()
+                    return
+                }
+                
+                self.delegate?.didUpdateCommentsWithSuccess(
+                    self.modelAdapter.toNetworkModel(
+                        from: savedComments
+                    )
+                )
+                return
+            }
+            
             self.delegate?.didFailGetComments()
         }
     }
     
     public func getUser(with userId: Int) {
         network.getUser(with: userId) { user in
+            
+            self.database.saveUser(self.modelAdapter.toDatabaseModel(from: user))
             self.delegate?.didUpdateUserWithSuccess(user)
+            
         } onError: { error in
-            debugPrint("ON USER ERROR", error)
+            if self.isOffline(networkError: error) {
+                let savedUser = self.database.fetchUser(with: userId)
+                
+                guard let user = savedUser else {
+                    self.delegate?.didFailGetUser()
+                    return
+                }
+                
+                self.delegate?.didUpdateUserWithSuccess(
+                    self.modelAdapter.toNetworkModel(
+                        from: user
+                    )
+                )
+            }
+            
             self.delegate?.didFailGetUser()
         }
     }
     
+    private func isOffline(networkError: String) -> Bool {
+        networkError == "The Internet connection appears to be offline."
+    }
 }

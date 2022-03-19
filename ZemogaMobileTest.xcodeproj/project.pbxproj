@@ -48,6 +48,7 @@
 		04D97C0B27E65C9700FC36F8 /* PostDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C0A27E65C9700FC36F8 /* PostDatabaseModel.swift */; };
 		04D97C1027E6613E00FC36F8 /* UserDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C0F27E6613E00FC36F8 /* UserDatabaseModel.swift */; };
 		04D97C1527E661B400FC36F8 /* CommentDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C1427E661B400FC36F8 /* CommentDatabaseModel.swift */; };
+		04D97C1C27E6633200FC36F8 /* PostsModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C1B27E6633200FC36F8 /* PostsModelAdapter.swift */; };
 		04F10B6A27E54525009DC48F /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F10B6927E54525009DC48F /* PostDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,7 @@
 		04D97C0A27E65C9700FC36F8 /* PostDatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDatabaseModel.swift; sourceTree = "<group>"; };
 		04D97C0F27E6613E00FC36F8 /* UserDatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDatabaseModel.swift; sourceTree = "<group>"; };
 		04D97C1427E661B400FC36F8 /* CommentDatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentDatabaseModel.swift; sourceTree = "<group>"; };
+		04D97C1B27E6633200FC36F8 /* PostsModelAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModelAdapter.swift; sourceTree = "<group>"; };
 		04F10B6927E54525009DC48F /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +169,7 @@
 		042EA04F27E4C03E002D4E08 /* ZemogaMobileTest */ = {
 			isa = PBXGroup;
 			children = (
+				04D97C1A27E6625500FC36F8 /* Adapter */,
 				04D97C0127E65B7600FC36F8 /* Database */,
 				04C680BB27E58EC900F52094 /* Repository */,
 				04C680BA27E58E7C00F52094 /* Network */,
@@ -350,6 +353,14 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
+		04D97C1A27E6625500FC36F8 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				04D97C1B27E6633200FC36F8 /* PostsModelAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -483,6 +494,7 @@
 				042EA0E427E50E3C002D4E08 /* PostView.swift in Sources */,
 				04C680CC27E5920800F52094 /* PostModel.swift in Sources */,
 				04D97C0327E65BA500FC36F8 /* PostsDatabase.swift in Sources */,
+				04D97C1C27E6633200FC36F8 /* PostsModelAdapter.swift in Sources */,
 				042EA05127E4C03E002D4E08 /* AppDelegate.swift in Sources */,
 				042EA0D127E508BF002D4E08 /* CommentsHeaderView.swift in Sources */,
 				042EA0B827E4DAE3002D4E08 /* PostDetailView.swift in Sources */,

@@ -22,7 +22,9 @@ struct PostView: View {
                     viewModel: PostDetailViewModel(
                         post: viewModel,
                         repository: PostRepository(
-                            network: PostNetwork()
+                            network: PostNetwork(),
+                            database: PostDatabase(),
+                            modelAdapter: PostsModelAdapter()
                         )
                     )
                 ),
