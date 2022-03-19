@@ -26,10 +26,17 @@ struct PostDetailView: View {
                         icon: IconConstants.ToolBarIcons.back
                     )
                 } leftButton: {
-                    NavigationBarButtonView(
-                        action: viewModel.toggleFavorite,
-                        icon: IconConstants.ToolBarIcons.favorite
-                    )
+                    HStack(spacing: 32) {
+                        NavigationBarButtonView(
+                            action: viewModel.removePost,
+                            icon: IconConstants.ToolBarIcons.trash
+                        )
+                        
+                        NavigationBarButtonView(
+                            action: viewModel.toggleFavorite,
+                            icon: IconConstants.ToolBarIcons.favorite
+                        )
+                    }
                 }
                 
                 PostDescriptionView(postDescription: viewModel.currentPost.body)

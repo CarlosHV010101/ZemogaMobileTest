@@ -40,6 +40,10 @@ final class PostDetailViewModel: ObservableObject {
     public func toggleFavorite() {
         
     }
+    
+    public func removePost() {
+        
+    }
 }
 
 //MARK: - PostRepositoryDelegate

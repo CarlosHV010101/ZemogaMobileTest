@@ -13,6 +13,7 @@ public enum IconConstants {
         static let back = "chevron.backward"
         static let load = "arrow.triangle.2.circlepath"
         static let favorite = "star"
+        static let trash = "trash"
         static let favoriteSelected = "star.fill"
     }
     

@@ -70,13 +70,16 @@ class PostRepository: PostRepositoryProtocol {
             
             let savedPosts =  self.database.fetchPosts()
             
-            self.delegate?.didUpdatePostsWithSuccess(
-                self.modelAdapter.toNetworkModel(
-                    from: savedPosts
-                )
-            )
-        } onError: { error in
+            self.delegate?.didUpdatePostsWithSuccess(posts)
             
+            
+//            self.delegate?.didUpdatePostsWithSuccess(
+//                self.modelAdapter.toNetworkModel(
+//                    from: savedPosts
+//                )
+//            )
+        } onError: { error in
+            debugPrint("POST ERROR", error)
             if self.isOffline(networkError: error) {
                 
                 let savedPosts = self.database.fetchPosts()

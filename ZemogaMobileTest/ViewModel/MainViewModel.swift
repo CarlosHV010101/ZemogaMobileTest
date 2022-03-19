@@ -52,7 +52,7 @@ extension MainViewModel: PostRepositoryDelegate {
                           userId: post.userId ?? 0,
                           title: post.title ?? "",
                           body: post.body ?? "",
-                          isFavorite: true)
+                          isFavorite: post.isFavorite ?? false)
         }
         
         self.favoritePosts = filterFavorites(posts)
