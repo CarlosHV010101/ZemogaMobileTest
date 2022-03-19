@@ -59,7 +59,7 @@ struct PostDetailView: View {
                         CommentsHeaderView()
                         
                         LoaderView()
-                            .padding
+                            .padding()
                     }
                 } else if viewModel.getCommentsHasError {
                     VStack {
