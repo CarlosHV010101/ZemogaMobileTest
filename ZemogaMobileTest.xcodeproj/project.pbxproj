@@ -54,6 +54,8 @@
 		04D97C6227E6E4D300FC36F8 /* MockPostNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C6127E6E4D300FC36F8 /* MockPostNetwork.swift */; };
 		04D97C6727E6E53B00FC36F8 /* MockPostDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C6627E6E53B00FC36F8 /* MockPostDatabase.swift */; };
 		04D97C6C27E6E5C300FC36F8 /* MockModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C6B27E6E5C300FC36F8 /* MockModelAdapter.swift */; };
+		04D97C7C27E6EBA600FC36F8 /* PostViewModelTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C7B27E6EBA600FC36F8 /* PostViewModelTestCases.swift */; };
+		04D97C8127E6ED4100FC36F8 /* PostDetailViewModelTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C8027E6ED4100FC36F8 /* PostDetailViewModelTestCases.swift */; };
 		04F10B6A27E54525009DC48F /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F10B6927E54525009DC48F /* PostDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +130,8 @@
 		04D97C6127E6E4D300FC36F8 /* MockPostNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostNetwork.swift; sourceTree = "<group>"; };
 		04D97C6627E6E53B00FC36F8 /* MockPostDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostDatabase.swift; sourceTree = "<group>"; };
 		04D97C6B27E6E5C300FC36F8 /* MockModelAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockModelAdapter.swift; sourceTree = "<group>"; };
+		04D97C7B27E6EBA600FC36F8 /* PostViewModelTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModelTestCases.swift; sourceTree = "<group>"; };
+		04D97C8027E6ED4100FC36F8 /* PostDetailViewModelTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModelTestCases.swift; sourceTree = "<group>"; };
 		04F10B6927E54525009DC48F /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -377,6 +381,8 @@
 			isa = PBXGroup;
 			children = (
 				04D97C5427E6E40B00FC36F8 /* MainViewModelTestCases.swift */,
+				04D97C7B27E6EBA600FC36F8 /* PostViewModelTestCases.swift */,
+				04D97C8027E6ED4100FC36F8 /* PostDetailViewModelTestCases.swift */,
 			);
 			path = TestCases;
 			sourceTree = "<group>";
@@ -568,6 +574,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D97C8127E6ED4100FC36F8 /* PostDetailViewModelTestCases.swift in Sources */,
+				04D97C7C27E6EBA600FC36F8 /* PostViewModelTestCases.swift in Sources */,
 				04D97C5D27E6E46800FC36F8 /* MockPostRepository.swift in Sources */,
 				04D97C6727E6E53B00FC36F8 /* MockPostDatabase.swift in Sources */,
 				04D97C6C27E6E5C300FC36F8 /* MockModelAdapter.swift in Sources */,
