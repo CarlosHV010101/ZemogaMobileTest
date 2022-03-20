@@ -49,6 +49,7 @@
 		04D97C1027E6613E00FC36F8 /* UserDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C0F27E6613E00FC36F8 /* UserDatabaseModel.swift */; };
 		04D97C1527E661B400FC36F8 /* CommentDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C1427E661B400FC36F8 /* CommentDatabaseModel.swift */; };
 		04D97C1C27E6633200FC36F8 /* PostsModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C1B27E6633200FC36F8 /* PostsModelAdapter.swift */; };
+		04D97C2A27E6E0A400FC36F8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C2927E6E0A400FC36F8 /* NetworkError.swift */; };
 		04F10B6A27E54525009DC48F /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F10B6927E54525009DC48F /* PostDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +119,7 @@
 		04D97C0F27E6613E00FC36F8 /* UserDatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDatabaseModel.swift; sourceTree = "<group>"; };
 		04D97C1427E661B400FC36F8 /* CommentDatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentDatabaseModel.swift; sourceTree = "<group>"; };
 		04D97C1B27E6633200FC36F8 /* PostsModelAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModelAdapter.swift; sourceTree = "<group>"; };
+		04D97C2927E6E0A400FC36F8 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		04F10B6927E54525009DC48F /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -282,6 +284,7 @@
 				042EA09D27E4C275002D4E08 /* IconConstants.swift */,
 				042EA0A527E4C450002D4E08 /* TextConstants.swift */,
 				04C680C627E590F900F52094 /* URLConstants.swift */,
+				04D97C2927E6E0A400FC36F8 /* NetworkError.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				04D97C1527E661B400FC36F8 /* CommentDatabaseModel.swift in Sources */,
 				042EA09527E4C1F8002D4E08 /* NavigationBarView.swift in Sources */,
 				042EA0EE27E5136B002D4E08 /* LoaderView.swift in Sources */,
+				04D97C2A27E6E0A400FC36F8 /* NetworkError.swift in Sources */,
 				04C680A827E578EF00F52094 /* UserViewModel.swift in Sources */,
 				042EA11227E53315002D4E08 /* MainViewModel.swift in Sources */,
 			);

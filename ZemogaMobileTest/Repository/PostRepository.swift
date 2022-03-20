@@ -175,6 +175,6 @@ class PostRepository: PostRepositoryProtocol {
     }
     
     private func isOffline(networkError: String) -> Bool {
-        networkError == "The Internet connection appears to be offline."
+        networkError == NetworkError.offline.rawValue
     }
 }
