@@ -13,7 +13,6 @@
 		042EA05727E4C03E002D4E08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042EA05627E4C03E002D4E08 /* Assets.xcassets */; };
 		042EA05A27E4C03E002D4E08 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042EA05927E4C03E002D4E08 /* Preview Assets.xcassets */; };
 		042EA05D27E4C03E002D4E08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042EA05B27E4C03E002D4E08 /* LaunchScreen.storyboard */; };
-		042EA06827E4C03F002D4E08 /* ZemogaMobileTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA06727E4C03F002D4E08 /* ZemogaMobileTestTests.swift */; };
 		042EA07327E4C03F002D4E08 /* ZemogaMobileTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA07227E4C03F002D4E08 /* ZemogaMobileTestUITests.swift */; };
 		042EA08B27E4C154002D4E08 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA08A27E4C154002D4E08 /* MainView.swift */; };
 		042EA09527E4C1F8002D4E08 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA09427E4C1F8002D4E08 /* NavigationBarView.swift */; };
@@ -50,6 +49,11 @@
 		04D97C1527E661B400FC36F8 /* CommentDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C1427E661B400FC36F8 /* CommentDatabaseModel.swift */; };
 		04D97C1C27E6633200FC36F8 /* PostsModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C1B27E6633200FC36F8 /* PostsModelAdapter.swift */; };
 		04D97C2A27E6E0A400FC36F8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C2927E6E0A400FC36F8 /* NetworkError.swift */; };
+		04D97C5527E6E40B00FC36F8 /* MainViewModelTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C5427E6E40B00FC36F8 /* MainViewModelTestCases.swift */; };
+		04D97C5D27E6E46800FC36F8 /* MockPostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C5C27E6E46800FC36F8 /* MockPostRepository.swift */; };
+		04D97C6227E6E4D300FC36F8 /* MockPostNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C6127E6E4D300FC36F8 /* MockPostNetwork.swift */; };
+		04D97C6727E6E53B00FC36F8 /* MockPostDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C6627E6E53B00FC36F8 /* MockPostDatabase.swift */; };
+		04D97C6C27E6E5C300FC36F8 /* MockModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D97C6B27E6E5C300FC36F8 /* MockModelAdapter.swift */; };
 		04F10B6A27E54525009DC48F /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F10B6927E54525009DC48F /* PostDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,7 +84,6 @@
 		042EA05C27E4C03E002D4E08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		042EA05E27E4C03F002D4E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042EA06327E4C03F002D4E08 /* ZemogaMobileTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZemogaMobileTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		042EA06727E4C03F002D4E08 /* ZemogaMobileTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZemogaMobileTestTests.swift; sourceTree = "<group>"; };
 		042EA06927E4C03F002D4E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042EA06E27E4C03F002D4E08 /* ZemogaMobileTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZemogaMobileTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		042EA07227E4C03F002D4E08 /* ZemogaMobileTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZemogaMobileTestUITests.swift; sourceTree = "<group>"; };
@@ -120,6 +123,11 @@
 		04D97C1427E661B400FC36F8 /* CommentDatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentDatabaseModel.swift; sourceTree = "<group>"; };
 		04D97C1B27E6633200FC36F8 /* PostsModelAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModelAdapter.swift; sourceTree = "<group>"; };
 		04D97C2927E6E0A400FC36F8 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		04D97C5427E6E40B00FC36F8 /* MainViewModelTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTestCases.swift; sourceTree = "<group>"; };
+		04D97C5C27E6E46800FC36F8 /* MockPostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostRepository.swift; sourceTree = "<group>"; };
+		04D97C6127E6E4D300FC36F8 /* MockPostNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostNetwork.swift; sourceTree = "<group>"; };
+		04D97C6627E6E53B00FC36F8 /* MockPostDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostDatabase.swift; sourceTree = "<group>"; };
+		04D97C6B27E6E5C300FC36F8 /* MockModelAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockModelAdapter.swift; sourceTree = "<group>"; };
 		04F10B6927E54525009DC48F /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,7 +207,8 @@
 		042EA06627E4C03F002D4E08 /* ZemogaMobileTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				042EA06727E4C03F002D4E08 /* ZemogaMobileTestTests.swift */,
+				04D97C5327E6E3EA00FC36F8 /* Mock */,
+				04D97C5227E6E3D000FC36F8 /* TestCases */,
 				042EA06927E4C03F002D4E08 /* Info.plist */,
 			);
 			path = ZemogaMobileTestTests;
@@ -362,6 +371,25 @@
 				04D97C1B27E6633200FC36F8 /* PostsModelAdapter.swift */,
 			);
 			path = Adapter;
+			sourceTree = "<group>";
+		};
+		04D97C5227E6E3D000FC36F8 /* TestCases */ = {
+			isa = PBXGroup;
+			children = (
+				04D97C5427E6E40B00FC36F8 /* MainViewModelTestCases.swift */,
+			);
+			path = TestCases;
+			sourceTree = "<group>";
+		};
+		04D97C5327E6E3EA00FC36F8 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				04D97C5C27E6E46800FC36F8 /* MockPostRepository.swift */,
+				04D97C6127E6E4D300FC36F8 /* MockPostNetwork.swift */,
+				04D97C6627E6E53B00FC36F8 /* MockPostDatabase.swift */,
+				04D97C6B27E6E5C300FC36F8 /* MockModelAdapter.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -540,7 +568,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				042EA06827E4C03F002D4E08 /* ZemogaMobileTestTests.swift in Sources */,
+				04D97C5D27E6E46800FC36F8 /* MockPostRepository.swift in Sources */,
+				04D97C6727E6E53B00FC36F8 /* MockPostDatabase.swift in Sources */,
+				04D97C6C27E6E5C300FC36F8 /* MockModelAdapter.swift in Sources */,
+				04D97C6227E6E4D300FC36F8 /* MockPostNetwork.swift in Sources */,
+				04D97C5527E6E40B00FC36F8 /* MainViewModelTestCases.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
