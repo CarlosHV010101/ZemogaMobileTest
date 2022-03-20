@@ -10,6 +10,7 @@ import Foundation
 protocol PostRepositoryDelegate: AnyObject {
     func didUpdatePostsWithSuccess(_ posts: [Post])
     func didFailGetPosts()
+    func didUpdatePost(_ post: Post)
     func didUpdateCommentsWithSuccess(_ comments: [Comment])
     func didFailGetComments()
     func didUpdateUserWithSuccess(_ user: User)
@@ -24,6 +25,9 @@ extension PostRepositoryDelegate {
         return
     }
     func didUpdateCommentsWithSuccess(_ comments: [Comment]) {
+        return
+    }
+    func didUpdatePost(_ post: Post) {
         return
     }
     func didFailGetComments() {
@@ -162,7 +166,8 @@ class PostRepository: PostRepositoryProtocol {
     }
     
     public func toggleFavorite(postId: Int) {
-        self.database.deleteAll()
+        let post = self.database.toggleFavoriteStatus(postId: postId)
+        self.delegate?.didUpdatePost(self.modelAdapter.toNetworkModel(from: post))        
     }
     
     public func removePost(postId: Int) {

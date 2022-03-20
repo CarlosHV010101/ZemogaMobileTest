@@ -11,7 +11,7 @@ protocol PostDatabaseProtocol {
     func savePost(_ post: PostDatabaseModel)
     func fetchPosts() -> [PostDatabaseModel]
     func deletePost(with id: Int) 
-    func toggleFavoriteStatus()
+    func toggleFavoriteStatus(postId: Int) -> PostDatabaseModel
     func deleteAll()
     func saveComment(_ comment: CommentDatabaseModel)
     func fetchComments(with postId: Int) -> [CommentDatabaseModel]
@@ -33,8 +33,8 @@ final class PostDatabase: PostDatabaseProtocol {
         
     }
     
-    func toggleFavoriteStatus() {
-        
+    func toggleFavoriteStatus(postId: Int) -> PostDatabaseModel {
+        return PostDatabaseModel(id: 0, userId: 0, title: "", body: "", isFavorite: false)
     }
     
     func deleteAll() {

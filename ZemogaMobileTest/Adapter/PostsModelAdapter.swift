@@ -10,6 +10,7 @@ import Foundation
 protocol PostsModelAdapterProtocol {
     func toDatabaseModel(from networkModel: Post) -> PostDatabaseModel
     func toNetworkModel(from databaseModels: [PostDatabaseModel]) -> [Post]
+    func toNetworkModel(from databaseModel: PostDatabaseModel) -> Post
     func toDatabaseModel(from networkModel: Comment) -> CommentDatabaseModel
     func toNetworkModel(from databaseModels: [CommentDatabaseModel]) -> [Comment]
     func toDatabaseModel(from networkModel: User) -> UserDatabaseModel
@@ -38,6 +39,16 @@ final class PostsModelAdapter: PostsModelAdapterProtocol {
                 isFavorite: databaseModel.isFavorite
             )
         }
+    }
+    
+    func toNetworkModel(from databaseModel: PostDatabaseModel) -> Post {
+        Post(
+            id: databaseModel.id,
+            userId: databaseModel.userId,
+            title: databaseModel.title,
+            body: databaseModel.body,
+            isFavorite: databaseModel.isFavorite
+        )
     }
     
     func toDatabaseModel(from networkModel: Comment) -> CommentDatabaseModel {
