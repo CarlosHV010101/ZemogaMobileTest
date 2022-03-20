@@ -27,6 +27,10 @@ public enum TextConstants {
             static let phone = "Phone: "
             static let website = "Website: "
         }
+        
+        enum Comments {
+            static let headerTitle = "Comments"
+        }
     }
     
     enum Status {

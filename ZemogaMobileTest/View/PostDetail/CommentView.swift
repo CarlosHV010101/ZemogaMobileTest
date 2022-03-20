@@ -16,7 +16,7 @@ struct CommentView: View {
     
     var body: some View {
         VStack {
-            Text("Cell description which explains the consequences of above action")
+            Text(viewModel.body)
                 .font(.footnote)
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.leading)

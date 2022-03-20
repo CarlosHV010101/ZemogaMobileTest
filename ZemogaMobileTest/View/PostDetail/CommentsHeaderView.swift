@@ -10,7 +10,7 @@ import SwiftUI
 struct CommentsHeaderView: View {
     var body: some View {
         HStack {
-            Text("Comments")
+            Text(TextConstants.PostDetails.Comments.headerTitle)
             
             Spacer()
         }
