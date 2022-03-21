@@ -33,13 +33,13 @@ final class MainViewModel: ObservableObject {
     }
     
     private func filterFavorites(_ posts: [PostViewModel]) -> [PostViewModel] {
-        return posts.filter { $0.isFavorite }
+        posts.filter { $0.isFavorite }
     }
     
-    private func sortAll(_ posts: [PostViewModel]) {
-        //TODO: SORT POSTS
-        self.allPosts = posts
+    private func filterNotFavorites(_ posts: [PostViewModel]) -> [PostViewModel] {
+        posts.filter { !$0.isFavorite }
     }
+    
 }
 
 //MARK: - PostRepositoryDelegate
@@ -57,7 +57,7 @@ extension MainViewModel: PostRepositoryDelegate {
         
         self.favoritePosts = filterFavorites(posts)
         
-        self.sortAll(posts)
+        self.allPosts = filterFavorites(posts) + filterNotFavorites(posts)
     }
     
     func didFailGetPosts() {
