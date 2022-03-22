@@ -80,4 +80,14 @@ extension PostDetailViewModel: PostRepositoryDelegate {
         isLoadingUser = false
         getUserHasError = true
     }
+    
+    func didUpdatePost(_ post: Post) {
+        self.currentPost = PostViewModel.init(
+            id: post.id ?? 0,
+            userId: post.userId ?? 0,
+            title: post.title ?? "",
+            body: post.body ?? "",
+            isFavorite: post.isFavorite ?? false
+        )
+    }
 }

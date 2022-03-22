@@ -51,6 +51,7 @@ protocol PostRepositoryProtocol {
     func getUser(with userId: Int)
     func toggleFavorite(postId: Int)
     func removePost(postId: Int)
+    func removeAll()
 }
 
 class PostRepository: PostRepositoryProtocol {
@@ -76,14 +77,12 @@ class PostRepository: PostRepositoryProtocol {
             
             let savedPosts =  self.database.fetchPosts()
             
-            self.delegate?.didUpdatePostsWithSuccess(posts)
             
-            
-//            self.delegate?.didUpdatePostsWithSuccess(
-//                self.modelAdapter.toNetworkModel(
-//                    from: savedPosts
-//                )
-//            )
+            self.delegate?.didUpdatePostsWithSuccess(
+                self.modelAdapter.toNetworkModel(
+                    from: savedPosts
+                )
+            )
         } onError: { error in
             debugPrint("POST ERROR", error)
             if self.isOffline(networkError: error) {
@@ -167,11 +166,20 @@ class PostRepository: PostRepositoryProtocol {
     
     public func toggleFavorite(postId: Int) {
         let post = self.database.toggleFavoriteStatus(postId: postId)
-//        self.delegate?.didUpdatePost(self.modelAdapter.toNetworkModel(from: post))        
+
+        guard let post = post else {
+            return
+        }
+        
+        self.delegate?.didUpdatePost(self.modelAdapter.toNetworkModel(from: post))
     }
     
     public func removePost(postId: Int) {
         self.database.deletePost(with: postId)
+    }
+    
+    func removeAll() {
+        self.database.deleteAll()
     }
     
     private func isOffline(networkError: String) -> Bool {

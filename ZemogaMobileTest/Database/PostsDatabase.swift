@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import Realm
+import RealmSwift
 
 protocol PostDatabaseProtocol {
     func savePost(_ post: PostDatabaseModel)
@@ -21,94 +23,104 @@ protocol PostDatabaseProtocol {
 
 final class PostDatabase: PostDatabaseProtocol {
     
-//    private var realm: Realm {
-//        do {
-//            let realm = try Realm()
-//            return realm
-//        } catch {
-//            debugPrint("Could not access database", error.localizedDescription)
-//        }
-//    }
+    private var realm: Realm {
+        do {
+            let realm = try Realm()
+            return realm
+        } catch {
+            debugPrint("Could not access database", error.localizedDescription)
+        }
+        return self.realm
+    }
     
     func savePost(_ post: PostDatabaseModel) {
-//        do {
-//            try realm.write {
-//                //Veriffy if is favorite
-//                realm.add(post, update: .modified)
-//            }
-//        } catch {
-//
-//        }
+        do {
+            try realm.write {
+            
+                if let existentPost = realm.object(ofType: PostDatabaseModel.self, forPrimaryKey: post.id) {
+                    
+                    if existentPost.isFavorite {
+                        existentPost.isFavorite = true
+                        realm.add(existentPost, update: .modified)
+                    }
+                    return
+                }
+                
+                realm.add(post, update: .modified)
+            }
+        } catch {
+            debugPrint("Could not save post")
+        }
     }
     
     func fetchPosts() -> [PostDatabaseModel] {
-//        realm.objects(ofType:PostDatabaseModel.self)
-        return []
+        Array(realm.objects(PostDatabaseModel.self))
     }
     
     func deletePost(with id: Int) {
-//        do {
-//            try realm.write {
-//                if let existentPost = realm.object(ofType: PostDatabaseModel.self, forPrimaryKey: id) {
-//                    realm.delete(existentPost)
-//                }
-//            }
-//        } catch {
-//            debugPrint("Could not delete post")
-//        }
+        do {
+            try realm.write {
+                if let existentPost = realm.object(ofType: PostDatabaseModel.self, forPrimaryKey: id) {
+                    realm.delete(existentPost)
+                }
+            }
+        } catch {
+            debugPrint("Could not delete post")
+        }
     }
     
     func toggleFavoriteStatus(postId: Int) -> PostDatabaseModel? {
-//        if let post = realm.object(oFType: PostDatabaseModel.self, forPrimeryKey: postId) {
-//            do {
-//                try realm.write {
-//                    post.isFavorite.toggle()
-//                    realm.add(post, update: .modified)
-//                }
-//            } catch {
-//                debugPrint("Could not toggle favorite")
-//            }
-//        }        
-        return PostDatabaseModel(id: 0, userId: 0, title: "", body: "", isFavorite: false)
+        if let post = realm.object(ofType: PostDatabaseModel.self, forPrimaryKey: postId) {
+            do {
+                try realm.write {
+                    post.isFavorite.toggle()
+                    realm.add(post, update: .modified)                    
+                }
+            } catch {
+                debugPrint("Could not toggle favorite")
+            }
+            
+            return post
+        } else {
+            return nil
+        }
     }
     
     func deleteAll() {
-//        do {
-//            try realm.write {
-//                realm.deleteAll()
-//            }
-//        } catch {
-//            debugPrint("Could not delete all", error.localizedDescription)
-//        }
+        do {
+            try realm.write {
+                realm.deleteAll()
+            }
+        } catch {
+            debugPrint("Could not delete all", error.localizedDescription)
+        }
     }
     
     func saveComment(_ comment: CommentDatabaseModel) {
-//        do {
-//            try real.write {
-//                real.add(comment, updated: .modified)
-//            }
-//        } catch {
-//            debugPrint("Could not save comment", error.localizedDescription)
-//        }
+        do {
+            try realm.write {
+                realm.add(comment, update: .modified)
+            }
+        } catch {
+            debugPrint("Could not save comment", error.localizedDescription)
+        }
     }
     
     func fetchComments(with postId: Int) -> [CommentDatabaseModel] {
-//        realm.objects(ofType: CommentDatabaseModel.self).filter("postId CONTAINS[cd] %@", postId)
-        return []
+       Array(realm.objects(CommentDatabaseModel.self).filter("postId CONTAINS[cd] %@", postId))
     }
     
     func saveUser(_ user: UserDatabaseModel) {
-//        do {
-//            try realm.write {
-//                realm.add(user, updated: .modified)
-//            }
-//        } catch {
-//            debugPrint("Could not save user", error.localizedDescription)
-//        }
+        do {
+            try realm.write {
+                realm.add(user, update: .modified)
+            }
+        } catch {
+            debugPrint("Could not save user", error.localizedDescription)
+        }
     }
     
     func fetchUser(with id: Int) -> UserDatabaseModel? {
-//        realm.object(ofType: UserDatabaseModel.self, forPrimaryKey: id)
-        return nil
+        realm.object(ofType: UserDatabaseModel.self, forPrimaryKey: id)
     }
 }

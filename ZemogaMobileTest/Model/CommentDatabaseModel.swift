@@ -6,13 +6,19 @@
 //
 
 import Foundation
+import RealmSwift
 
-class CommentDatabaseModel {
-    var id: Int = 0
-    var postId: Int = 0
-    var body: String = ""
+class CommentDatabaseModel: Object {
+    @objc dynamic var id: Int = 0
+    @objc dynamic var postId: Int = 0
+    @objc dynamic var body: String = ""
     
-    init(id: Int, postId: Int, body: String) {
+    override static func primaryKey() -> String {
+        return "id"
+    }
+    
+    convenience init(id: Int, postId: Int, body: String) {
+        self.init()
         self.id = id
         self.postId = postId
         self.body = body

@@ -30,6 +30,7 @@ final class MainViewModel: ObservableObject {
     public func deleteAllPosts() {
         allPosts.removeAll()
         favoritePosts.removeAll()
+        postRepository.removeAll()
     }
     
     private func filterFavorites(_ posts: [PostViewModel]) -> [PostViewModel] {

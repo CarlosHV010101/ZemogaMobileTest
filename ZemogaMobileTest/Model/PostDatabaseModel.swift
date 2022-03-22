@@ -6,16 +6,21 @@
 //
 
 import Foundation
+import RealmSwift
 
-class PostDatabaseModel {
-    var id: Int = 0
-    var userId: Int = 0
-    var title: String = ""
-    var body: String = ""
-    var isFavorite: Bool = false
+class PostDatabaseModel: Object {
+    @objc dynamic var id: Int = 0
+    @objc dynamic var userId: Int = 0
+    @objc dynamic var title: String = ""
+    @objc dynamic var body: String = ""
+    @objc dynamic var isFavorite: Bool = false
     
-    init(id: Int, userId: Int, title: String, body: String, isFavorite: Bool) {
-        //TODO: add super init
+    override static func primaryKey() -> String {
+        return "id"
+    }
+    
+    convenience init(id: Int, userId: Int, title: String, body: String, isFavorite: Bool) {
+        self.init()
         self.id = id
         self.userId = userId
         self.title = title

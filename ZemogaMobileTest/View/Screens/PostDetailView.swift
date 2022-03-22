@@ -34,7 +34,7 @@ struct PostDetailView: View {
                         
                         NavigationBarButtonView(
                             action: viewModel.toggleFavorite,
-                            icon: IconConstants.ToolBarIcons.favorite
+                            icon: viewModel.currentPost.isFavorite ? IconConstants.ToolBarIcons.favoriteSelected : IconConstants.ToolBarIcons.favorite
                         )
                     }
                 }

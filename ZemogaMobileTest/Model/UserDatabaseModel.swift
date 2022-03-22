@@ -6,15 +6,21 @@
 //
 
 import Foundation
+import RealmSwift
 
-class UserDatabaseModel {
-    var id: Int = 0
-    var name: String = ""
-    var email: String = ""
-    var phone: String = ""
-    var website: String = ""
+class UserDatabaseModel: Object {
+    @objc dynamic var id: Int = 0
+    @objc dynamic var name: String = ""
+    @objc dynamic var email: String = ""
+    @objc dynamic var phone: String = ""
+    @objc dynamic var website: String = ""
     
-    init(id: Int, name: String, email: String, phone: String, website: String) {
+    override static func primaryKey() -> String {
+        return "id"
+    }
+    
+    convenience init(id: Int, name: String, email: String, phone: String, website: String) {
+        self.init()
         self.id = id
         self.name = name
         self.phone = phone
