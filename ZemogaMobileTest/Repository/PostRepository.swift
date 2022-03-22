@@ -167,7 +167,7 @@ class PostRepository: PostRepositoryProtocol {
     
     public func toggleFavorite(postId: Int) {
         let post = self.database.toggleFavoriteStatus(postId: postId)
-        self.delegate?.didUpdatePost(self.modelAdapter.toNetworkModel(from: post))        
+//        self.delegate?.didUpdatePost(self.modelAdapter.toNetworkModel(from: post))        
     }
     
     public func removePost(postId: Int) {
